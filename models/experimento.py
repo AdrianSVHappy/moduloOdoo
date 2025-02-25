@@ -1,1 +1,17 @@
-# -*- coding: utf-8 -*-
+from odoo import models, fields
+
+"""
+Experimentos -> titulo, campo, investigadores, materiales
+"""
+
+class lab_experimento(models.Model):
+    #Informacion
+    _name = 'lab.experimento'
+    _description = 'Experimento'
+    
+    #Campos
+    name = fields.Char(string="titulo", required=True)
+    campo = fields.Char()
+    
+    
+    #Relaciones
