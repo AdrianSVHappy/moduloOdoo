@@ -9,7 +9,7 @@ class lab_investigador(models.Model):
     _description = 'Investigador'
     
     #Campos
-    name = fields.Char(string="nombre", required=True)
+    name = fields.Char(string="Nombre", required=True)
     apellidos = fields.Char()
     
     #Relaciones
