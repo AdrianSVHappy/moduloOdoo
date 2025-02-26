@@ -89,6 +89,32 @@
         </field>
     </record>
 
+        <!--    Vista lista informe-->
+    <record id="view_lab_informe_list" model="ir.ui.view">
+        <field name="name">lab.informe.list</field>
+        <field name="model">lab.informe</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!--    Vista formulario informes-->
+    <record id="view_lab_informe_form" model="ir.ui.view">
+        <field name="name">view_lab_informe.form</field>
+        <field name="model">lab.informe</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="texto"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <!--    Acciones    -->
     <record id="action_lab_investigador" model="ir.actions.act_window">
         <field name="name">Investigadores</field>
@@ -103,6 +129,11 @@
     <record id="action_lab_material" model="ir.actions.act_window">
         <field name="name">Materiales</field>
         <field name="res_model">lab.material</field>
+        <field name="view_mode">list,form</field>
+    </record>
+        <record id="action_lab_informe" model="ir.actions.act_window">
+        <field name="name">Informes</field>
+        <field name="res_model">lab.informe</field>
         <field name="view_mode">list,form</field>
     </record>
 
@@ -125,4 +156,9 @@
         name="Materiales"
         parent="menu_lab_root"
         action="action_lab_material"/>
+    <menuitem
+        id="menu_lab_informe"
+        name="Informes"
+        parent="menu_lab_root"
+        action="action_lab_informe"/>
 </odoo>
