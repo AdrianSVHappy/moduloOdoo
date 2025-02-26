@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 """
 Experimentos -> titulo, campo, investigadores, materiales
@@ -17,3 +17,6 @@ class lab_experimento(models.Model):
     #Relaciones
     investigadores = fields.One2many('lab.investigador', 'experimento', readonly=True)
     materiales = fields.Many2many('lab.material')
+
+
+    

@@ -14,4 +14,4 @@ class lab_investigador(models.Model):
     
     #Relaciones
     experimento = fields.Many2one('lab.experimento')
-    
+
