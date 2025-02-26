@@ -1,8 +1,8 @@
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 """
-Materiales -> nombre, sin_usar, total
+Materiales -> nombre, cantidad
 """
 
 class lab_material(models.Model):
@@ -14,5 +14,10 @@ class lab_material(models.Model):
     
     
     #Calculados
-    sin_usar = fields.Integer()
-    total = fields.Integer()
+    cantidad = fields.Integer(inverse='_noCero')
+    
+    
+    @api.constrains(cantidad)
+    def _noCero(self):
+        if self.cantidad < 0:
+            self.cantidad = 0

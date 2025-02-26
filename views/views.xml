@@ -9,6 +9,7 @@
             <list>
                 <field name="name"/>
                 <field name="apellidos"/>
+                <field name="experimento"/>
             </list>
         </field>
     </record>
@@ -23,6 +24,7 @@
                     <group>
                         <field name="name"/>
                         <field name="apellidos"/>
+                        <field name="experimento"/>
                     </group>
                 </sheet>
             </form>
@@ -38,6 +40,8 @@
             <list>
                 <field name="name"/>
                 <field name="campo"/>
+                <field name="investigadores"/>
+                <field name="materiales"/>
             </list>
         </field>
     </record>
@@ -52,6 +56,8 @@
                     <group>
                         <field name="name"/>
                         <field name="campo" />
+                        <field name="investigadores"/>
+                        <field name="materiales"/>
                     </group>
                 </sheet>
             </form>
@@ -66,8 +72,7 @@
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>
-                <field name="sin_usar"/>
-                <field name="total"/>
+                <field name="cantidad"/>
             </list>
         </field>
     </record>
@@ -81,8 +86,7 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-                        <field name="sin_usar"/>
-                        <field name="total"/>
+                        <field name="cantidad"/>
                     </group>
                 </sheet>
             </form>

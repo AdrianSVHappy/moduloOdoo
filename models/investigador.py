@@ -13,5 +13,5 @@ class lab_investigador(models.Model):
     apellidos = fields.Char()
     
     #Relaciones
-    
+    experimento = fields.Many2one('lab.experimento')
     

@@ -10,4 +10,4 @@ class lab_informe(models.Model):
     
     #Campos
     name = fields.Char(string="ID", select=True)
-    texto = fields.Char()
+    texto = fields.Text()
