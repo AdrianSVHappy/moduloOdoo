@@ -10,7 +10,7 @@ class lab_material(models.Model):
     _description = 'Material'
     
     #Campos
-    name = fields.Char(string="nombre", required=True)
+    name = fields.Char(string="Nombre", required=True)
     
     
     #Calculados

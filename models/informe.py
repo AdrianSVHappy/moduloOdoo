@@ -9,5 +9,5 @@ class lab_informe(models.Model):
     _description = 'Informe'
     
     #Campos
-    name = fields.Char(string="id", select=True)
+    name = fields.Char(string="ID", select=True)
     texto = fields.Char()
