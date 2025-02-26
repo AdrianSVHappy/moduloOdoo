@@ -10,7 +10,7 @@ class lab_experimento(models.Model):
     _description = 'Experimento'
     
     #Campos
-    name = fields.Char(string="titulo", required=True)
+    name = fields.Char(string="Titulo", required=True)
     campo = fields.Char()
     
     

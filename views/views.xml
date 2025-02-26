@@ -29,10 +29,45 @@
         </field>
     </record>
 
+
+    <!--    Vista lista experimento-->
+    <record id="view_lab_experimento_list" model="ir.ui.view">
+        <field name="name">lab.experimento.list</field>
+        <field name="model">lab.experimento</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="campo"/>
+            </list>
+        </field>
+    </record>
+
+    <!--    Vista formulario experimento-->
+    <record id="view_lab_experimento_form" model="ir.ui.view">
+        <field name="name">view_lab_experimento.form</field>
+        <field name="model">lab.experimento</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="campo" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
     <!--    Acciones    -->
     <record id="action_lab_investigador" model="ir.actions.act_window">
         <field name="name">Investigadores</field>
         <field name="res_model">lab.investigador</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_lab_experimento" model="ir.actions.act_window">
+        <field name="name">Experimentos</field>
+        <field name="res_model">lab.experimento</field>
         <field name="view_mode">list,form</field>
     </record>
 
@@ -46,4 +81,9 @@
         name="Investigadores"
         parent="menu_lab_root"
         action= "action_lab_investigador"/>
+    <menuitem
+        id="menu_lab_experimentos"
+        name="Experimentos"
+        parent="menu_lab_root"
+        action="action_lab_experimento"/>
 </odoo>
