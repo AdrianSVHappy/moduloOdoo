@@ -33,6 +33,38 @@
         </field>
     </record>
 
+    <!--    Vista kanban investigadores-->
+    <record id="view_lab_investigador_kanban" model="ir.ui.view">
+        <field name="name">lab.investigador.kanban</field>
+        <field name="model">lab.investigador</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click card">
+                            <div class="card-body">
+                                <h3>
+                                    <field name="name"/>
+                                </h3>
+                                <h4>
+                                    <field name="apellidos"/>
+                                </h4>
+                                <hr/>
+                                <p>
+                                    <field name="experimento"/>
+                                </p>
+                                <p>
+                                    Encargado: <field name="encargado"/>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
 
     <!--    Vista lista experimento-->
     <record id="view_lab_experimento_list" model="ir.ui.view">
@@ -136,7 +168,7 @@
     <record id="action_lab_investigador" model="ir.actions.act_window">
         <field name="name">Investigadores</field>
         <field name="res_model">lab.investigador</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">list,form,kanban</field>
     </record>
     <record id="action_lab_experimento" model="ir.actions.act_window">
         <field name="name">Experimentos</field>
