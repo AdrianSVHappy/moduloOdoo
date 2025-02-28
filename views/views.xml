@@ -208,6 +208,6 @@
     <menuitem
         id="menu_lab_informe"
         name="Informes"
-        parent="menu_lab_root"
+        parent="menu_lab_experimentos"
         action="action_lab_informe"/>
 </odoo>
