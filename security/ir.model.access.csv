@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lab_investigador,lab.investigador,model_lab_investigador,base.group_user,1,0,0,0
+access_lab_investigador,lab.investigador,model_lab_investigador,base.group_system,1,0,1,1
+access_lab_experimento,lab.experimento,model_lab_experimento,base.group_user,1,0,0,0
+access_lab_experimento,lab.experimento,model_lab_experimento,base.group_system,1,0,1,1
+access_lab_material,lab.material,model_lab_material,base.group_user,1,0,0,0
+access_lab_material,lab.material,model_lab_material,base.group_system,1,0,1,1
+access_lab_informe,lab.informe,model_lab_informe,base.group_user,1,0,0,0
+access_lab_informe,lab.informe,model_lab_informe,base.group_system,1,0,1,1
