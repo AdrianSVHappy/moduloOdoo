@@ -13,12 +13,12 @@ class lab_informe(models.Model):
 
 
     #Relaciones
-    redactor = fields.Many2one('lab.investigador')
-    experimento = fields.Many2one('lab.experimento')
+    redactor = fields.Many2one('lab.investigador',  required=True)
+    experimento = fields.Many2one('lab.experimento',  required=True)
     
     #Calculado
     name = fields.Char(string="ID", select=True, compute="_setId")
-    texto = fields.Text(inverse="_autoText")
+    texto = fields.Text(inverse="_autoText",  required=True)
 
     
     @api.constrains(redactor, experimento)

@@ -11,6 +11,7 @@ class lab_investigador(models.Model):
     #Campos
     name = fields.Char(string="Nombre", required=True)
     apellidos = fields.Char()
+    encargado = fields.Boolean()
     
     #Relaciones
     experimento = fields.Many2one('lab.experimento')

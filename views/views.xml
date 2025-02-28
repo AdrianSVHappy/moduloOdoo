@@ -6,10 +6,11 @@
         <field name="name">lab.investigador.list</field>
         <field name="model">lab.investigador</field>
         <field name="arch" type="xml">
-            <list>
+            <list decoration-primary="encargado == True">
                 <field name="name"/>
                 <field name="apellidos"/>
                 <field name="experimento"/>
+                <field name="encargado"/>
             </list>
         </field>
     </record>
@@ -25,6 +26,7 @@
                         <field name="name"/>
                         <field name="apellidos"/>
                         <field name="experimento"/>
+                        <field name="encargado"/>
                     </group>
                 </sheet>
             </form>
@@ -37,11 +39,17 @@
         <field name="name">lab.experimento.list</field>
         <field name="model">lab.experimento</field>
         <field name="arch" type="xml">
-            <list>
-                <field name="name"/>
+            <!--
+            < es igual a &lt;
+            > es igual a &gt;
+            -->
+            <list decoration-danger="progresion == 0" decoration-warning="progresion &gt; 0 and progresion &lt; 100" decoration-success="progresion == 100">
+                <field name="name" decoration-bf="True"/>
                 <field name="campo"/>
                 <field name="investigadores"/>
                 <field name="materiales"/>
+                <field name="progresion" widget="progressbar"/>
+                <field name="realizada"/>
             </list>
         </field>
     </record>
@@ -54,10 +62,11 @@
             <form string="">
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="name" />
                         <field name="campo" />
-                        <field name="investigadores"/>
-                        <field name="materiales"/>
+                        <field name="investigadores" widget="many2many_tags"/>
+                        <field name="materiales" widget="many2many_tags"/>
+                        <field name="progresion" />
                     </group>
                 </sheet>
             </form>
@@ -71,7 +80,7 @@
         <field name="model">lab.material</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
+                <field name="name" decoration-bf="True"/>
                 <field name="cantidad"/>
             </list>
         </field>
@@ -99,7 +108,7 @@
         <field name="model">lab.informe</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
+                <field name="name" decoration-bf="True"/>
                 <field name="redactor"/>
                 <field name="experimento"/>
             </list>
