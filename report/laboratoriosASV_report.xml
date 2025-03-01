@@ -1,0 +1,9 @@
+<odoo>
+    <record id="report_lab_informe" model="ir.actions.report">
+        <field name="name">Informe</field>
+        <field name="model">lab.informe</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">laboratoriosASV.template_laboratoriosASV</field>
+        <field name="report_file">laboratoriosASV.template_laboratoriosASV</field>
+    </record>
+</odoo>

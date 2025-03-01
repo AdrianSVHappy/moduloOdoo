@@ -29,8 +29,12 @@
 	'data': [
 #   	Este primero indica la politica de acceso del módulo
         'security/ir.model.access.csv',
+#       Este es el report
+        'report/laboratoriosASV_report.xml',
 #   	Cargamos las vistas y las plantillas
     	'views/views.xml',
+#       Esta es la plantilla del reporte
+        'views/laboratoriosASV_template.xml',
 	]
 
 }
