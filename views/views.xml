@@ -191,7 +191,7 @@
         id="menu_lab_root"
         name="Laboratorio"/>
     <menuitem
-        id="menu_lab_investigadoes"
+        id="menu_lab_investigadores"
         name="Investigadores"
         parent="menu_lab_root"
         action= "action_lab_investigador"/>
@@ -205,6 +205,11 @@
         name="Materiales"
         parent="menu_lab_root"
         action="action_lab_material"/>
+    <menuitem
+        id="menu_lab_subexperimentos"
+        name="Experimentos"
+        parent="menu_lab_experimentos"
+        action="action_lab_experimento"/>
     <menuitem
         id="menu_lab_informe"
         name="Informes"
